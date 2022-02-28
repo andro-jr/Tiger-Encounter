@@ -1,0 +1,610 @@
+/*--------------------------------------------------------------------- utility calsses */
+
+*{
+    margin:0 auto;
+    padding:0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width:85%;
+    margin:0 auto;
+}
+.h-primary{
+    color: #f34225;
+    font-family: 'Work Sans', sans-serif;
+    margin:25px 30px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bolder;
+}
+.p-primary{
+    color: white;
+    font-family: 'Baloo Bhai 2', cursive;
+    margin:15px 30px;
+    font-size: 20px;
+}
+.duration{
+    text-align: center;
+    border-top:2px solid white;
+    border-bottom:2px solid white;
+    padding:25px;
+}
+.package{
+    display: flex;
+    align-items: center;
+    width:89%;
+    margin: 0 auto;
+    padding:15px 0px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    
+}
+.viewpackage{
+    width:75%;
+}
+.package a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    background: linear-gradient(to right,#f16918,#f34225);
+    padding:10px;
+    border-radius: 8px;  
+    box-shadow: 1px 1px 4px 1px black;    
+}
+.package a:hover{
+    color:#000000;
+}
+.stars{
+    width: 25%;   
+}
+.fa-star{
+    color:#f16918;
+}
+#greystar{
+    color: grey;
+}
+
+
+/* -------------------------------------------------------------------navigation bar */
+.navigation{
+    display: flex;
+    align-items: center;
+    margin:10px 2px;
+    position:relative;
+    top:0;
+    left:0;
+}
+.navigation::after{
+    content: "";
+    position: absolute;
+    bottom:-52px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: url('../images/texture-top.png') no-repeat right/contain;
+    z-index: -1;
+}
+.logo{
+    width:20%;
+
+}
+nav img{
+    display: block;
+    width: 42%;
+    margin: 4px auto;
+}
+.navbar{
+    width:80%;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    font-family: 'Rowdies', cursive;
+    font-size: 1.1rem; 
+   
+}
+.navbar a:hover{
+    border-bottom: 5px solid #f16918;
+}
+.navbar a:active{
+    border-bottom: 5px solid #f16918;
+}
+
+/* -----------------------------------------------------------------------section 1 tiger image and box */
+#tigerimg{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+#tigerimg::before{
+    content:"";
+    background: url("../images/snow-leopard.jpg") no-repeat center center/cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 35%;
+    z-index: -3;
+}
+.snowleo_cont{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    position: relative;
+    margin: 80px 8px;
+   
+}
+.snowleo_cont::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color:black;
+    z-index: -2;
+    opacity: .6;
+    border-radius: 8px;
+}
+/* -------------------------------------------------------------------------------section 2*/
+.containers{
+    display: flex;
+    margin-bottom: 30px;
+    height:600px;
+}
+.containerbox{
+    position: relative;
+    width:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 0px black;
+    border-radius: 5px;
+    margin: 0 20px;
+    height:40%;
+}
+.containerimg{
+    width:100%;
+    height: 100%;    
+}
+.containerimg img{
+    width:100%;
+    height: 100%;
+    display: block;
+    border-radius: 5px;
+}
+.boxcontent a{
+    text-decoration: none;
+}
+.boxcontent{
+    position: absolute;
+    top: 200px;
+    z-index: 2;
+    background-color: aliceblue;
+    width:90%;
+    box-shadow: 1px 1px 10px 0px black;
+    border-radius: 5px;
+}
+.boxcontent h2{
+    text-align: left;
+    font-size: 24px;
+}
+.boxcontent p{
+    color: black;
+    font-size: 18px;
+    margin: 0px 25px;
+    text-align: justify;
+}
+.boxcontent .duration{
+    border-top:2px solid rgb(92, 88, 88);
+    border-bottom:2px solid rgb(92, 88, 88);
+    color: rgb(92, 88, 88);
+    font-size: 17px;
+    padding: 3px 25px;
+}
+.stars{
+    font-size: 10px;
+}
+.boxcontent .package{
+    margin-bottom:0px;
+}
+#rino{
+    object-fit: cover;
+}
+/* ---------------------------------------------------------------------------------------section 3 offers */
+.offercontainer{
+    margin:40px;
+    padding:45px;
+    background-color: aliceblue;
+}
+.heading h1 a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Rowdies', cursive;
+    width:40%;
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.offercontainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.offerbox{
+    width:275px;
+    height:275px;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+    transition: 0.5s;
+    
+}
+.offerbox:hover{
+    z-index: 1;
+    transform: scale(1.25);
+    box-shadow: 0 25px 40px rgba(0, 0, 0,.5);
+}
+.offerbox .boximg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.offerbox .boximg::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg,#242322,#554a48);
+    mix-blend-mode: multiply;
+    transition: 0.5s;
+    opacity: 0;
+}
+.offerbox:hover .boximg::before{
+    opacity: 1;
+}
+.offerbox .boximg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+}
+.offerbox .boxtexxt{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    z-index:1;
+}
+.boxtexxt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.boxtexxt .icon img{
+    width:64px;
+    display: block;
+    opacity: 0;  
+}
+.offerbox:hover .boxtexxt .icon img{
+   opacity: 1;
+}
+.boxtexxt h3{
+    color: #f34225;
+    margin:10px;
+    font-size: 26px;
+    font-family: 'Akaya Telivigala', cursive;
+    text-align: center;
+    transition: 0.5s;
+    transform: translateY(200px);
+    transition-delay:0.5s ;
+}
+.boxtexxt p{
+    color: white;
+    width:90%;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    transition: 0.5s;
+    transform: translateY(200px);
+    transition-delay:0.5s ;
+}
+.offerbox:hover .boxtexxt h3,.offerbox:hover .boxtexxt p{
+    transform: translateY(0);
+}
+/*--------------------------------------------------------------------------- section 4 our blogs */
+#blog .heading{
+    width:30%;
+}
+.blogscontainer{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    padding:40px 80px;
+}
+.blogbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:33%;
+    background-color: rgb(255, 255, 255);
+    margin:30px;
+    box-shadow: 1px 1px 10px gray;
+}
+.blogbox a{
+    text-decoration: none;
+}
+.title a{
+    color: #000000;
+    font-size: 24px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.title a:hover{
+    color: #f34225;
+}
+.title {
+    width:90%;
+    text-align: center;
+    font-weight: bolder;
+    margin:10px;
+}
+.date{
+    color: rgb(85, 84, 84);
+    font-family: 'Khand', sans-serif;
+    width:50%;
+    text-align: center;
+    margin: 0 auto;
+}
+.blogimg{
+    width:90%;
+    border-radius: 9px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.blogimg img{
+    width:100%;
+    border-radius: 9px;
+    margin:10px auto;
+    display: block;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+.blogbox p{
+    width: 90%;
+    text-align: justify;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    font-weight: 800;
+    margin:10px auto; 
+    padding:10px;
+}
+.button{
+    margin: 20px;
+    padding:10px;
+}
+.button a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    background: linear-gradient(to right,#f16918,#f34225);
+    padding:10px;
+    border-radius: 8px;  
+    box-shadow: 1px 1px 2px black; 
+}
+.button a:hover{
+    color:#000000;
+}
+.blogbox:hover .blogimg img{
+    transform: scale(1.2);
+}
+/* -----------------------------------------------------------------------section 5 why us? */
+#whyus .heading{
+    margin:40px;
+}
+.whycontainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+}
+
+.whybox{
+    width:30%;
+    min-height:460px;
+    margin:20px;
+    background-color: rgb(241, 239, 239);
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: -8px 8px rgb(245, 153, 166);
+    
+}
+.whybox:hover{
+    background-color: rgb(245, 153, 166);
+    transform: scale(1.1);
+    box-shadow: none;
+}
+.whybox .icon{
+    margin:25px;
+}
+.whybox .icon img{
+    width:60px;
+}
+.whybox .title{
+    margin:10px 25px;
+    width:90%;
+    color: #000000;
+    font-size: 30px;
+    font-family: 'Roboto Serif', sans-serif;
+    text-align: left; 
+}
+.whybox p{
+    width: 90%;
+    text-align: justify;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    font-weight: 800;
+    margin:20px auto; 
+    padding:5px;
+}
+/* ---------------------------------------------------------------------------section footer ------------------------------------------------------------*/
+footer #followus{
+    position: relative;
+    margin-top:30px;
+    border-bottom: 2px solid #f16918;
+}
+footer #followus::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg,#f16918,#f34225);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+#followus{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#followus .text{
+    color: white;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 29px;
+    padding:30px 20px;
+    width:60%;
+    text-align: right;
+
+}
+#followus .icons{
+    width:40%;
+
+}
+#followus .icons a{
+    font-size: 30px;
+    padding:10px 10px;
+    margin:10px 10px;
+    color: rgb(255, 255, 255);
+    transition:0.5s;
+
+}
+#final{
+    position: relative;
+}
+#final::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(360deg,#f16918,#f34225);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#followus .icons a:hover{
+    font-size: 40px;
+}
+#final .wrapper{
+    display: flex;
+}
+.finaltitle{
+    color: white;
+    margin:30px 30px;
+    font-family: 'Khand', sans-serif;
+    text-align: left;
+    text-decoration: underline;
+}
+.pages,.contactinfo{
+    display: flex;
+    flex-direction: column;
+    width:25%;
+}
+.pages ul{
+    margin:0 30px;
+}
+.pages ul li{
+    list-style: none;
+    padding:3px;
+    
+}
+.pages ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto Serif', sans-serif; 
+    font-size: 16px;
+}
+.pages ul li a:hover{
+    color: black;
+    font-weight: 1000;
+}
+.contactinfo p{
+    color: white;
+    font-family: 'Roboto Serif', sans-serif;
+    font-size: 16px;
+    padding:3px;
+    margin:0 30px;
+}
+.partners{
+    width:50%;
+}
+.partners .finaltitle{
+    margin:30px 3px;
+}
+.partnerscontainer{
+    display: flex;
+
+}
+.partnerbox{
+    width:50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.partnerimg{
+    width:48%;
+    display: block;
+    
+}
+.partnerimg img{
+    width:100%;
+    background-color: white;
+    margin:3px;
+}
+#tripadvisor{
+    width:100%;
+    margin:3px;
+}
+#tripadvisor img{
+    padding:10px 30px;
+}
+#bird{
+    height:215px;
+    margin:0 2px;
+}
+#bird img{
+    height: 100%;
+}
+#copyright{
+    color: white;
+    background-color: #f34225;
+    width:100%;
+    text-align: center;
+    padding:10px;
+}
